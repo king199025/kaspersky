@@ -2,6 +2,8 @@
 namespace frontend\controllers;
 
 use common\classes\Debug;
+use common\models\db\SocialAccount;
+use dektrium\user\models\User;
 use Yii;
 use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
@@ -74,6 +76,20 @@ class SiteController extends Controller
     public function actionIndex()
     {
         return $this->render('index');
+    }
+
+
+    /**
+     * Displays homepage.
+     *
+     * @return mixed
+     */
+    public function actionProfile()
+    {
+        $user = User::findOne(['id' => Yii::$app->user->id]);
+        $social = SocialAccount::find()->where(['user_id' => Yii::$app->user->id])->one()->provider;
+        //Debug::prn($user);
+        return $this->render('profile', ['user' => $user, 'social' => $social]);
     }
 
 

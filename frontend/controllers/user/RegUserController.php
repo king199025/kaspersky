@@ -43,7 +43,7 @@ class RegUserController extends RegistrationController
         $this->performAjaxValidation($model);
 
         if ($model->load(Yii::$app->request->post()) && $model->register()) {
-            Debug::prn($_POST);
+
             $this->trigger(self::EVENT_AFTER_REGISTER, $event);
 
             //$link = explode('@',$_POST['register-form']['email']);
@@ -163,6 +163,7 @@ class RegUserController extends RegistrationController
         if ($user->load(\Yii::$app->request->post()) && $user->create()) {
             $account->connect($user);
             $this->trigger(self::EVENT_AFTER_CONNECT, $event);
+            Debug::prn($user);
             \Yii::$app->user->login($user, $this->module->rememberFor);
             return $this->goBack();
         }

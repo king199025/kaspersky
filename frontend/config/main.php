@@ -64,13 +64,19 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                'profile' => '/user/settings/profile',
-                'tasks' => '/site/tasks'
+                'profile' => '/site/profile',
+                'tasks' => '/tasks/default'
             ]
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             'useFileTransport' => false,
+        ],
+    ],
+
+    'modules' => [
+        'tasks' => [
+            'class' => 'frontend\modules\tasks\Tasks',
         ],
     ],
     'params' => $params,

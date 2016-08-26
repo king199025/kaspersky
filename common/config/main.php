@@ -36,7 +36,23 @@ return [
         'user' => [
             'class' => 'dektrium\user\Module',
             'controllerMap' => [
-                'registration' => '\frontend\controllers\user\RegUserController',
+                'registration' => [
+                    'class' => \frontend\controllers\user\RegUserController::className(),
+                    'on ' . \dektrium\user\controllers\RegistrationController::EVENT_AFTER_REGISTER => function ($event) {
+                        $tasks = new \common\models\db\Tasks();
+                        $user_id = \dektrium\user\models\User::findOne(['username' => $event->form->username]);
+                        $tasks->user_id = $user_id->id;
+                        $tasks->save();
+                    }
+                ],
+
+
+                /*'registration' => '\frontend\controllers\user\RegUserController',
+                'on ' . \dektrium\user\controllers\RegistrationController::EVENT_AFTER_REGISTER => function ($e) {
+                    $tasks = new \common\models\db\Tasks();
+                    $tasks->user_id = $e->id;
+                    $tasks->save();
+                },*/
                 'recovery' => '\frontend\controllers\user\RecoveryController',
             ],
             'modelMap' => [

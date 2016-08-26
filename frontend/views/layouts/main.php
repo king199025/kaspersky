@@ -43,8 +43,9 @@ AppAsset::register($this);
                 if(Yii::$app->controller->action->id == 'index'){
                     $indexAct = '-active';
                 }
-                if(Yii::$app->controller->action->id == 'tasks'){
+                if(Yii::$app->controller->module->id == 'tasks'){
                     $indexTasks = '-active';
+                    $indexAct = '';
                 }
                 if(Yii::$app->controller->action->id == 'rating'){
                     $indexRating = '-active';

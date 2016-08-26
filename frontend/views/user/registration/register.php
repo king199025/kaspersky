@@ -31,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ]); ?>
 
 <?= $form->field($model, 'email')->textInput(['placeholder' => 'Укажите здесь свой электронный адрес для связи', 'class' => 'mail-input'])->label(false) ?>
-
+<?= $form->field($model, 'username') ?>
 <?= $form->field($model, 'institution')->textInput(['placeholder' => 'А здесь название вашего учебного заведения', 'class' => 'house-input'])->label(false); ?>
 <?php if ($module->enableGeneratingPassword == false): ?>
     <?= $form->field($model, 'password')->passwordInput() ?>
