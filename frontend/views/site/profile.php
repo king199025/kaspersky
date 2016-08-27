@@ -25,7 +25,7 @@ $this->title = 'Профиль';
             <div class="kabinet__zadaniya_items">
                 <div class="obvertka">
                     <h3>телефон</h3>
-                    <div class="kabinet-thumb <?= \common\classes\TasksFunction::showClassTaskY('phone')?>">
+                    <div class="kabinet-thumb task-list__item <?= \common\classes\TasksFunction::showClassTaskY('phone')?>">
                         <img class="kabinet-thumb_pic" src="/theme/kaspersky/img/icon_phoone_kabinet.png" alt="">
                         <img class="task-list__image-overlay" src="/theme/kaspersky/img/icon_overlay_kabinet.png" alt="Icon1" title="Icon1">
                         <img class="task-list__image-accept" src="/theme/kaspersky/img/icon_accept.svg" alt="Icon1" title="Icon1">
@@ -37,7 +37,7 @@ $this->title = 'Профиль';
             <div class="kabinet__zadaniya_items ">
                 <div class="obvertka">
                     <h3>Лотерея</h3>
-                    <div class="kabinet-thumb <?= \common\classes\TasksFunction::showClassTaskY('lotereya')?>">
+                    <div class="kabinet-thumb task-list__item <?= \common\classes\TasksFunction::showClassTaskY('lotereya')?>">
                         <img class="kabinet-thumb_pic" src="/theme/kaspersky/img/icon_lottery_kabinet.png" alt="">
                         <img class="task-list__image-overlay" src="/theme/kaspersky/img/icon_overlay_kabinet.png" alt="Icon1" title="Icon1">
                         <img class="task-list__image-accept" src="/theme/kaspersky/img/icon_accept.svg" alt="Icon1" title="Icon1">
@@ -45,7 +45,7 @@ $this->title = 'Профиль';
                 </div>
                 <?= \common\classes\TasksFunction::showLinkTasks('lotereya')?>
             </div>
-            <div class="kabinet__zadaniya_items <?= \common\classes\TasksFunction::showClassTaskY('kredit')?>">
+            <div class="kabinet__zadaniya_items task-list__item <?= \common\classes\TasksFunction::showClassTaskY('kredit')?>">
 
                 <div class="obvertka">
                     <h3>кредитная карта</h3>

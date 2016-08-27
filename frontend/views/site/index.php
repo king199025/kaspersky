@@ -23,7 +23,8 @@ $this->title = 'My Yii Application';
                 </div>
             </div>
             <div class="icon-list__item">
-                <img class="icon-list__image" src="/theme/img/icon2_september.png" alt="Icon2" title="Icon2">
+
+                <img class="icon-list__image" src="/theme/img/icon2_september.png" alt="Icon2" title="Icon2">3
                 <div class="icon-list__text">
                     <p>Для участия в чемпионате необходимо в период с 9 по 25 сентября 2016 года зарегистрироваться на сайти и пройти онлайн-задания</p>
                 </div>

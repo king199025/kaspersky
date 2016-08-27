@@ -3,6 +3,7 @@
 namespace frontend\modules\tasks\controllers;
 
 use common\models\db\Tasks;
+use Yii;
 use yii\web\Controller;
 
 /**
@@ -22,7 +23,14 @@ class DefaultController extends Controller
         // 2 выполнено
         // 3 провалено
 
-        $tasks = Tasks::find()->where(['user_id' => \Yii::$app->user->id])->one();
-        return $this->render('index', ['tasks' => $tasks ]);
+        if(!Yii::$app->user->isGuest){
+            $tasksUser = Tasks::find()->where(['user_id' => Yii::$app->user->id])->one();
+            if(empty($tasksUser)){
+                $tasks = new \common\models\db\Tasks();
+                $tasks->user_id = Yii::$app->user->id;
+                $tasks->save();
+            }
+        }
+        return $this->render('index');
     }
 }
