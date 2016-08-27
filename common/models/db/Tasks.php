@@ -9,9 +9,9 @@ use Yii;
  *
  * @property integer $id
  * @property integer $user_id
- * @property integer $task_phone_status
- * @property integer $task_lotereya_status
- * @property integer $task_kredit_status
+ * @property integer $task_status_phone
+ * @property integer $task_status_lotereya
+ * @property integer $task_status_kredit
  * @property string $task_phone_reply
  * @property string $task_lotereya_reply
  * @property string $task_kredit_reply
@@ -34,7 +34,7 @@ class Tasks extends \yii\db\ActiveRecord
     {
         return [
             [['user_id'], 'required'],
-            [['user_id', 'task_phone_status', 'task_lotereya_status', 'task_kredit_status', 'task_time_end'], 'integer'],
+            [['user_id', 'task_status_phone', 'task_status_lotereya', 'task_status_kredit', 'task_time_end'], 'integer'],
             [['task_phone_reply', 'task_lotereya_reply', 'task_kredit_reply'], 'string', 'max' => 255],
         ];
     }
@@ -47,9 +47,9 @@ class Tasks extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'user_id' => 'User ID',
-            'task_phone_status' => 'Task Phone Status',
-            'task_lotereya_status' => 'Task Lotereya Status',
-            'task_kredit_status' => 'Task Kredit Status',
+            'task_status_phone' => 'Task Status Phone',
+            'task_status_lotereya' => 'Task Status Lotereya',
+            'task_status_kredit' => 'Task Status Kredit',
             'task_phone_reply' => 'Task Phone Reply',
             'task_lotereya_reply' => 'Task Lotereya Reply',
             'task_kredit_reply' => 'Task Kredit Reply',
