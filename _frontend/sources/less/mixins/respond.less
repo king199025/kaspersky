@@ -1,0 +1,39 @@
+.respond( @size, @rules ) {
+	& when ( @size = tiny ) {
+		@rules();
+	}
+	& when ( @size = small ) {
+		@media (min-width: @breakpoint-small) {
+			@rules();
+		}
+	}
+	& when ( @size = medium ) {
+		@media (min-width: @breakpoint-medium) {
+			@rules();
+		}
+	}
+	& when ( @size = large ) {
+		@media (min-width: @breakpoint-large) {
+			@rules();
+		}
+	}
+	& when  ( @size = huge ) {
+		@media (min-width: @breakpoint-huge) {
+			@rules();
+		}
+	}
+}
+
+.respond-property( @property: margin-left, @values: @respond-margins-outer ) {
+	.loop(@counter) when (@counter <= length(@breakpoint-config)) {
+		.respond( extract(@breakpoint-config, @counter), {
+			@{property}: extract(@values, @counter);
+		});
+		.loop((@counter + 1));    // next iteration
+	}
+	.loop(1);
+}
+
+.respond-font-size( @font-sizes: @respond-font-sizes ) {
+	.respond-property( @property: font-size, @values: @font-sizes );
+}

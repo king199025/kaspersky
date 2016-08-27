@@ -1,0 +1,49 @@
+.form-group {
+     margin-bottom: 0px;
+}
+.reg{
+    display: none;
+}
+
+.auth-icon{
+    display: inline-block!important;
+    margin: 30px 15px 0!important;
+    width: 45px!important;
+    height: 45px!important;
+    border-radius: 50%!important;
+    background-color: #b7b7b7!important;
+    background-position-x: 50%!important;
+    background-position-y: 50%!important;
+    background-size: 75%!important;
+    background-repeat: no-repeat!important;
+    cursor: pointer!important;
+}
+
+.auth-icon.vkontakte{
+    background: url(../img/vk.png) no-repeat;
+
+}
+
+.auth-icon.facebook{
+    background: url(../img/fb.png) no-repeat;
+}
+
+
+.auth-icon.twitter{
+    background: url(../img/twitter.png) no-repeat;
+}
+
+.auth-client{
+    padding: 0!important;
+}
+
+#w0{
+    float: none!important;
+    margin: 0 auto!important;
+    display: inline-block!important;
+    position: relative!important;
+}
+
+.popup-1, .popup {
+    z-index: 99999!important;
+}

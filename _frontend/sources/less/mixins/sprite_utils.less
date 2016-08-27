@@ -1,0 +1,28 @@
+/*.sprite-centred(@sprite) {
+	.sprite(@sprite);
+
+	margin-top: 0 - extract(@sprite, 6)/2;
+	margin-left: 0 - extract(@sprite, 5)/2;
+}
+
+
+.sprite-retina(@sprite) {
+	.sprite-image(@sprite);
+
+	height: extract(@sprite, 6) / 2;
+	width: extract(@sprite, 5) / 2;
+
+	@sprite-offset-x: extract(@sprite, 3) /2;
+	@sprite-offset-y: extract(@sprite, 4) /2;
+	background-position: @sprite-offset-x @sprite-offset-y;
+	background-size: 238px/2 190px/2;
+}
+
+.sprite-retina-mobile(@name)
+{
+	background-image: url('@{path_images}sprite/iconmobile2x/@{name}.png');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: ~"@{iconmobile_@{name}-width}" ~"@{iconmobile_@{name}-height}";
+}
+*/

@@ -1,0 +1,30 @@
+{
+  "name": "Leningrad",
+  "version": "0.0.1",
+  "devDependencies": {
+    "debug": "^2.2.0",
+    "getit": "^1.0.0",
+    "grunt": "^0.4.2",
+    "grunt-autoprefixer": "^1.0.1",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-notify": "*",
+    "grunt-rigger": "*",
+    "grunt-spritesmith": "*",
+    "grunt-svgstore": "git://github.com/zakurdaev/grunt-svgstore#unique_classes",
+    "load-grunt-config": "*",
+    "matchdep": "*",
+    "time-grunt": "*",
+    "uglify-save-license": "^0.4.1"
+  },
+  "engines": {
+    "node": ">=0.10.1"
+  }
+}

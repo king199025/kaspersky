@@ -1,0 +1,40 @@
+.link-underline()
+{
+	text-decoration: none;
+
+	span
+	{
+		border-bottom: 1px solid fade(#fff, 25%);
+
+		transition: all .3s ease-out;
+	}
+
+	&:hover span
+	{
+		border-bottom: none;
+	}
+
+	&:active
+	{
+		opacity: 0.5;
+	}
+}
+
+.link-in-post()
+{
+	color: @clrt_blue;
+	text-decoration: none;
+
+	border-bottom: 1px solid transparent;
+	transition: all .3s ease-out;
+
+	&:hover
+	{
+		border-bottom-color: @clrt_blue;
+	}
+
+	&:active
+	{
+		opacity: 0.5;
+	}
+}

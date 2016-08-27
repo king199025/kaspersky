@@ -1,0 +1,178 @@
+.top-list2
+{
+	position: relative;
+	z-index: 100;
+	top: -60px;
+
+	margin: 0 auto;
+	width: 100%;
+	max-width: @breakpoint-huge;
+
+	&_header {
+		font-weight: 900;
+		font-size: 15px;
+		text-transform: uppercase;
+
+		text-shadow: -2px -2px 0 #2c5b4b,
+					2px -2px 0 #2c5b4b,
+					-2px 2px 0 #2c5b4b,
+					2px 2px 0 #2c5b4b;
+
+		color: #ffffff;
+	}
+
+	&_header &_cell
+	{
+		height: 60px;
+	}
+
+	&_header-image
+	{
+		position: absolute;
+		left: 50%;
+		top: 10px;
+
+		display: block;
+		margin-left: 40px;
+		width: 33px;
+
+		z-index: -1;
+	}
+
+	&_body
+	{
+		font-family: 'Arial';
+		font-size: 14px;
+		font-weight: bold;
+
+		color: #ffffff;
+
+		border-bottom: 1px solid #11c0a4;
+	}
+
+	&_row
+	{
+
+	}
+
+	&_body &_row
+	{
+		box-shadow: inset 0px -1px 0px 0px #0d947b, 0px 1px 0px 0px #11c0a4;
+	}
+
+	&_cell
+	{
+		position: relative;
+
+		//display: table-cell;
+		height: 40px;
+		width: auto;
+
+		padding: 5px 10px;
+
+		vertical-align: middle;
+		text-align: center;
+
+
+
+		&.-num
+		{
+			width: 4%;
+			text-align: center;
+		}
+
+		&.-name
+		{
+			width: 13%;
+
+			text-align: left;
+		}
+
+		&.-task
+		{
+			min-width: 16%;
+		}
+
+		&.-text
+		{
+			font-size: 10px;
+			font-weight: normal;
+		}
+	}
+}
+
+
+.top-list__num-cell {
+	width: 48px;
+}
+
+.top-list__name-cell {
+	text-align: left;
+	width: 170px;
+}
+
+.top-list__social-cell {
+	width: 105px;
+}
+
+.top-list__task-cell {
+	width: 140px;
+}
+
+.top-list__over-cell {
+	width: 150px;
+}
+
+.top-list__institut-cell {
+	width: 187px;
+}
+
+.top-list__wrapp {
+	display: table;
+	margin: 0 auto;
+	max-width: @breakpoint-huge;
+}
+
+.top-list__row {
+	display: table-row;
+	padding: 8px 0;
+
+}
+
+.top-list__cell {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.top-list__font-top {
+	font-family: 'Arial', sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.top-list__font-loser {
+	color: #58ffe1;
+}
+
+.top-list__institut-cell-text {
+	font-size: 10px;
+	font-weight: normal;
+}
+
+.top-list__border-first {
+	display: block;
+	border-bottom: 1px solid #0d947b;
+}
+
+.top-list__border-all {
+	display: block;
+	border-top: 1px solid #11c0a4;
+	border-bottom: 1px solid #0d947b;
+}
+
+.top-list__border-last {
+	display: block;
+	border-top: 1px solid #11c0a4;
+}
